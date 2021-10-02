@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $Red-Hat;
+}
+
+p{
+    color: $Desaturated-blue;
+    line-height: 1.5;
+}
+
+h2,h3{
+    color: $Dark-blue;
+    font-weight: 900;
+}
+
+.wrapper {
+  width: 450px;
+  margin: auto;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 0 3px 22px -14px;
+}
+
+.card-content {
+  padding: 30px 40px;
+
+  .txt {
+    text-align: center;
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    p {
+   
+      margin-bottom: 25px;
+    
+    }
+  }
+}
+
+.card-plan {
+  padding: 20px;
+  border-radius: 20px;
+  background: $Very-pale-blue;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+      font-size: 18px;
+  }
+
+  img,h3{
+      float: left;
+  }
+  img{
+      margin-right: 15px;
+  }
+
+  a{
+      font-weight: 700;
+      transition: color  0.5s ease-in-out;
+
+      &:hover{
+          text-decoration: none;
+          color: hsl(245, 83%, 68%);
+
+      }
+  }
+}
+
+.btn {
+  @include bt;
+}
+
+.btn2 {
+  background: #fff;
+  color: $Desaturated-blue;
+  box-shadow: none;
+  margin-top: 12px;
+
+  &:hover {
+    color: $Dark-blue;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+ 
+
+    p{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    .card{
+        width: 90%;
+        margin: auto;
+    }
+
+    .card-content{
+        padding: 30px 20px;
+    }
+
+}
