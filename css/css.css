@@ -34,6 +34,10 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {
@@ -57,7 +61,7 @@ h3 {
 }
 
 .card {
-  width: 450px;
+  width: 410px;
   border-radius: 20px;
   overflow: hidden;
   -webkit-box-shadow: 0 3px 22px -14px;
@@ -191,6 +195,12 @@ h3 {
   .container {
     padding: 10px 0px;
   }
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 500px) {
