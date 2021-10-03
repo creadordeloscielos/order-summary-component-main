@@ -188,6 +188,9 @@ h3 {
   .wave {
     display: none;
   }
+  .container {
+    padding: 10px 0px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -196,7 +199,7 @@ h3 {
     margin: auto;
   }
   .card-content {
-    padding: 30px 20px;
+    padding: 30px 30px 10px 30px;
   }
 }
 /*# sourceMappingURL=css.css.map */

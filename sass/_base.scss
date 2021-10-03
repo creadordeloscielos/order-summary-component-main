@@ -50,8 +50,6 @@ h3 {
   display: none;
 }
 
-
-
 .card {
   width: 450px;
   border-radius: 20px;
@@ -160,8 +158,14 @@ h3 {
   .wave-mobile{
     display: none;
   }
+
   .wave{
     display: none
+  }
+
+  .container {
+    padding: 10px 0px;
+
   }
 }
 
@@ -173,7 +177,7 @@ h3 {
   }
 
   .card-content {
-    padding: 30px 20px;
+    padding: 30px 30px 10px 30px;
   }
 
  
