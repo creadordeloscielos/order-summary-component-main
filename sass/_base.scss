@@ -5,28 +5,67 @@
 
 body {
   font-family: $Red-Hat;
+  background-color: $Pale-blue;
 }
 
-p{
-    color: $Desaturated-blue;
-    line-height: 1.5;
+p {
+  color: $Desaturated-blue;
+  line-height: 1.5;
 }
 
-h2,h3{
-    color: $Dark-blue;
-    font-weight: 900;
+h2,
+h3 {
+  color: $Dark-blue;
+  font-weight: 900;
 }
 
 .wrapper {
-  width: 450px;
   margin: auto;
 }
 
+.dp-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+ 
+}
+
+.wave ,.wave-mobile {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    img{
+      width: 100%;
+    }
+}
+
+.wave-mobile{
+  display: none;
+}
+
+
+
 .card {
+  width: 450px;
   border-radius: 20px;
   overflow: hidden;
-  margin-top: 50px;
   box-shadow: 0 3px 22px -14px;
+  background: #fff;
+  
+}
+
+.card-header{
+    img{
+        width: 100%;
+
+    }
 }
 
 .card-content {
@@ -41,9 +80,7 @@ h2,h3{
     }
 
     p {
-   
       margin-bottom: 25px;
-    
     }
   }
 }
@@ -57,26 +94,26 @@ h2,h3{
   justify-content: space-between;
   align-items: center;
 
-  p{
-      font-size: 18px;
+  p {
+    font-size: 18px;
   }
 
-  img,h3{
-      float: left;
+  img,
+  h3 {
+    float: left;
   }
-  img{
-      margin-right: 15px;
+  img {
+    margin-right: 15px;
   }
 
-  a{
-      font-weight: 700;
-      transition: color  0.5s ease-in-out;
+  a {
+    font-weight: 700;
+    transition: color 0.5s ease-in-out;
 
-      &:hover{
-          text-decoration: none;
-          color: hsl(245, 83%, 68%);
-
-      }
+    &:hover {
+      text-decoration: none;
+      color: hsl(245, 83%, 68%);
+    }
   }
 }
 
@@ -97,27 +134,47 @@ h2,h3{
   }
 }
 
-.attribution{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
- 
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
 
-    p{
-        text-align: center;
-    }
-
+  p {
+    text-align: center;
+  }
 }
 
-@media screen and (max-width:600px){
-    .card{
-        width: 90%;
-        margin: auto;
-    }
+@media screen and (max-width: 1000px) {
 
-    .card-content{
-        padding: 30px 20px;
-    }
+  .wave-mobile{
+    display: block;
+  }
+  .wave{
+    display: none
+  }
+}
 
+@media screen and (max-width: 700px) {
+
+  .wave-mobile{
+    display: none;
+  }
+  .wave{
+    display: none
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .card-content {
+    padding: 30px 20px;
+  }
+
+ 
 }

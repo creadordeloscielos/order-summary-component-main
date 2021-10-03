@@ -6,6 +6,7 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  background-color: #e0e8ff;
 }
 
 p {
@@ -13,22 +14,59 @@ p {
   line-height: 1.5;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #1f2f56;
   font-weight: 900;
 }
 
 .wrapper {
-  width: 450px;
   margin: auto;
 }
 
+.dp-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  height: 100vh;
+}
+
+.wave, .wave-mobile {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.wave img, .wave-mobile img {
+  width: 100%;
+}
+
+.wave-mobile {
+  display: none;
+}
+
 .card {
+  width: 450px;
   border-radius: 20px;
   overflow: hidden;
-  margin-top: 50px;
   -webkit-box-shadow: 0 3px 22px -14px;
           box-shadow: 0 3px 22px -14px;
+  background: #fff;
+}
+
+.card-header img {
+  width: 100%;
 }
 
 .card-content {
@@ -68,7 +106,8 @@ h2, h3 {
   font-size: 18px;
 }
 
-.card-plan img, .card-plan h3 {
+.card-plan img,
+.card-plan h3 {
   float: left;
 }
 
@@ -78,8 +117,8 @@ h2, h3 {
 
 .card-plan a {
   font-weight: 700;
-  -webkit-transition: color  0.5s ease-in-out;
-  transition: color  0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .card-plan a:hover {
@@ -133,7 +172,25 @@ h2, h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  .wave-mobile {
+    display: block;
+  }
+  .wave {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wave-mobile {
+    display: none;
+  }
+  .wave {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .card {
     width: 90%;
     margin: auto;
